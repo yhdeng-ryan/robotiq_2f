@@ -26,7 +26,7 @@ colcon build --packages-up-to robotiq_2f_driver_ui
 ```
 
 ## Running Robotiq gripper driver
-### Find USB device name
+### Finding USB device name
 I have tried `lsusb` and `lsblk`, but they don't work well. Run this command instead:
 ```
 dmesg
@@ -57,7 +57,7 @@ There will be a window with open and close buttons.
 ros2 run robotiq_2f_driver_ui robotiq_2f_driver_ui
 ```
 
-## A ROS2 driver for the Robotiq 2f gripper
+# A ROS2 driver for the Robotiq 2f gripper (from original repo)
 Work in progress...
 
 Uses modbus protocol with RTU frame format for serial interfacing
@@ -135,22 +135,4 @@ Byte 5: Current (gCU)
 #### Byte 5: Current
 - 0-7: gCU: The current is read instantaneously from the motor drive, value between 0x00 and 0xFF, approximate current equivalent is 10 * value read in mA.
 
-### High level input mapping
-todo
-### Low level output mapping
-todo
-### High level output mapping
-todo
 
-# docker
-To build using docker:
-
-```
-sudo docker build . --tag robotiq
-```
-
-to run 
-
-```
-sudo docker run -t -i --rm --device=/dev/ttyUSB0 --network host robotiq ros2 run robotiq_2f_driver robotiq_2f_driver
-```
