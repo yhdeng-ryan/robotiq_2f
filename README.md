@@ -29,7 +29,7 @@ colcon build --packages-up-to robotiq_2f_driver_ui
 ### Finding USB device name
 I have tried `lsusb` and `lsblk`, but they don't work well. Run this command instead:
 ```
-dmesg
+dmesg | grep USB
 ```
 Hopefully, you will see something like `ttyUSB0`. And now we need to give permission to access it:
 ```
