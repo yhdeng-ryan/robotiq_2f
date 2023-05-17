@@ -24,7 +24,7 @@ pip install git+https://github.com/colcon/colcon-ros-cargo.git
 colcon build --packages-up-to robotiq_2f_driver
 colcon build --packages-up-to robotiq_2f_driver_ui
 ```
-* If you encounter problem building robotiq_2f_driver_ui, that might caused by the rust packages, “rust-lang/crates.io-index” that it uses to build. This repo is under maintainence recently (5/17/2023).
+* If you encounter problem building robotiq_2f_driver_ui, that might caused by the rust packages, [rust-lang/crates.io-index](https://github.com/rust-lang/crates.io-index) that it uses to build. This repo is under maintainence recently (5/17/2023).
 
 ## Running Robotiq gripper driver
 ### Finding USB device name
