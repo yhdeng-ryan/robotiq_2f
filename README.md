@@ -1,5 +1,7 @@
 # Instruction to install and run Robotiq gripper driver
 
+## This is the no_driver_ui version, where colcon will ignore the robotiq_2f_driver_ui package due to recent problem in its dependencies.
+
 ## Installation
 ### Clone robotiq repo
 Start the command from the root workspace directory.
